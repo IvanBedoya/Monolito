@@ -6,15 +6,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-
-@RestController
-@RequestMapping("/api/personas/persona")
-@CrossOrigin(origins = {"*"})
-public class MonolitoCRUD {
-    @Autowired
-    PersonaRepository repository;
-    @Autowired
+    @RestController
+    @RequestMapping("/api/personas/persona")
+    @CrossOrigin(origins = {"*"})
+    public class MonolitoCRUD {
+        @Autowired
+        PersonaRepository repository;
+        @Autowired
     PersonaMapper mapper;
     @GetMapping("mostrar_todos")
     public ResponseEntity<?> obtenerPersonas(){
